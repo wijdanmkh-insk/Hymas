@@ -2,11 +2,36 @@ import React from 'react';
 
 const Hero_page: React.FC = () => {
   return (
-    <div className='flex items-center justify-center px-10 py-10 mx-10 my-20 bg-white w-full rounded-xl'>
-      <div className="flex items-center justify-center">
-        <div className="w-32 flex items-center justify-center relative">
-          <img className="absolute" src="./src/assets/img/logo.png" alt="Logo" />
+    <div className='flex items-center justify-center px-10 py-6 mx-10 my-44 bg-white w-full rounded-xl'>
+      <div className="flex-row">
+        <div className="flex justify-center items-center flex-col">
+          <div className="w-32">
+            <img src="./src/assets/img/logo.png" alt="Logo" />
+          </div>
+
+          <div className='justify-center py-4'>
+            <p className="uppercase text-xs text-hijau-tua">manajemen sistem</p>
+            <p className="uppercase text-center text-4xl text-hijau-tua">hymas</p>
+          </div>
         </div>
+
+        <div className="flex flex-col items-center mt-4 text-center uppercase text-hijau-tua text-xs">
+          <p>kami hadir untuk mengurangi</p>
+          <p>sampah di sungai indonesia</p>
+        </div>
+
+        <div className="flex flex-col items-center mt-8">
+          <div className='flex flex-row space-x-2'> 
+            <div className='px-4 py-1 uppercase border-hijau-tua border-2 bg-putih text-hijau-tua rounded-2xl text-center'>
+              lihat
+            </div>
+
+          <div className='px-4 py-1 uppercase bg-hijau-tua text-putih rounded-2xl text-center'>
+            masuk
+          </div>
+        </div>
+</div>
+
       </div>
     </div>
   );

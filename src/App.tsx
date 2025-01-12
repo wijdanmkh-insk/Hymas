@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import '/src/App.css';
 import './assets/page/Hero_page';
 import Hero_page from './assets/page/Hero_page';
+import Footer from './assets/others/Footer';
 
 type LayoutProps = { 
   children: ReactNode; 
@@ -17,6 +18,7 @@ const App: React.FC = () => {
   return (
     <Layout>
       <Hero_page></Hero_page>
+      <Footer></Footer>
     </Layout>
   );
 }
