@@ -1,7 +1,8 @@
 import React, { ReactNode } from 'react';
+import { Routes, Route } from 'react-router-dom'; 
 import '/src/App.css';
-import './assets/page/Hero_page';
 import Hero_page from './assets/page/Hero_page';
+import Login_page from './assets/page/Login_page';
 
 type LayoutProps = { 
   children: ReactNode; 
@@ -18,7 +19,10 @@ const Layout = ({ children }: LayoutProps) => (
 const App: React.FC = () => {
   return (
     <Layout>
-      <Hero_page></Hero_page>
+      <Routes>
+        <Route path="/" element={<Hero_page />} />
+        <Route path="/login" element={<Login_page />} />
+      </Routes>
     </Layout>
   );
 }

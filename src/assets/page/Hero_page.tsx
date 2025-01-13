@@ -1,6 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Hero_page: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <div className='flex items-center justify-center px-10 py-6 mx-10 my-44 bg-white w-full rounded-xl'>
       <div className="flex-row">
@@ -26,11 +29,14 @@ const Hero_page: React.FC = () => {
               lihat
             </div>
 
-          <div className='px-4 py-1 uppercase bg-hijau-tua text-putih rounded-2xl text-center'>
-            masuk
+            <div
+              className='px-4 py-1 uppercase bg-hijau-tua text-putih rounded-2xl text-center cursor-pointer'
+              onClick={() => navigate('/login')}
+            >
+              masuk
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
   );
