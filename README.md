@@ -48,3 +48,35 @@ export default tseslint.config({
   },
 })
 ```
+
+# Required Packs to Install
+Follow these steps to install required dependencies
+## React-Vite
+### Install the latest version of React-Vite
+'''
+npm create vite@latest my-vue-app -- --template vue
+'''
+### Change directories of the project and install the dependencies
+'''
+cd my-project
+npm install
+'''
+
+## Tailwind
+### Create Vite Project
+'''
+npm create vite@latest my-project -- --template react
+cd my-project
+''''
+
+### Install Tailwind
+'''
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+'''
+
+### Run Project
+To run the project, type
+'''
+npm run dev
+'''
