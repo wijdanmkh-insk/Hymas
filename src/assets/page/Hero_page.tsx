@@ -1,44 +1,49 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Layout from '../others/Layout';
 
 const Hero_page: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='flex items-center justify-center px-10 py-6 mx-10 my-44 bg-white w-full rounded-xl'>
-      <div className="flex-row">
-        <div className="flex justify-center items-center flex-col">
-          <div className="w-32">
-            <img src="./src/assets/img/logo.png" alt="Logo" />
-          </div>
+    <Layout>
+      <div className='flex items-center justify-center min-h-screen'>
+        <div className='flex items-center justify-center px-8 py-6 mx-10 bg-white w-full max-w-lg rounded-xl shadow-md'>
+          <div className="flex-row">
+            <div className="flex justify-center items-center flex-col">
+              <div className="w-32">
+                <img src="./src/assets/img/logo.png" alt="Logo" />
+              </div>
 
-          <div className='justify-center py-4'>
-            <p className="uppercase text-xs text-hijau-tua">manajemen sistem</p>
-            <p className="uppercase text-center text-4xl text-hijau-tua">hymas</p>
-          </div>
-        </div>
-
-        <div className="flex flex-col items-center mt-4 text-center uppercase text-hijau-tua text-xs">
-          <p>kami hadir untuk mengurangi</p>
-          <p>sampah di sungai indonesia</p>
-        </div>
-
-        <div className="flex flex-col items-center mt-8">
-          <div className='flex flex-row space-x-2'> 
-            <div className='px-4 py-1 uppercase border-hijau-tua border-2 bg-putih text-hijau-tua rounded-2xl text-center'>
-              lihat
+              <div className='justify-center py-4'>
+                <p className="uppercase text-xs text-hijau-tua">manajemen sistem</p>
+                <p className="uppercase text-center text-4xl text-hijau-tua">hymas</p>
+              </div>
             </div>
 
-            <div
-              className='px-4 py-1 uppercase bg-hijau-tua text-putih rounded-2xl text-center cursor-pointer'
-              onClick={() => navigate('/login')}
-            >
-              masuk
+            <div className="flex flex-col items-center mt-4 text-center uppercase text-hijau-tua text-xs">
+              <p>kami hadir untuk mengurangi</p>
+              <p>sampah di sungai indonesia</p>
+            </div>
+
+            <div className="flex flex-col items-center mt-8">
+              <div className='flex flex-row space-x-2'> 
+                <div className='px-4 py-1 uppercase border-hijau-tua border-2 bg-putih text-hijau-tua rounded-2xl text-center'>
+                  lihat
+                </div>
+
+                <div
+                  className='px-4 py-1 uppercase bg-hijau-tua text-putih rounded-2xl text-center cursor-pointer'
+                  onClick={() => navigate('/login')}
+                >
+                  masuk
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
