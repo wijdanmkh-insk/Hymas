@@ -30,8 +30,7 @@ const Hero_page: React.FC = () => {
             masuk
           </div>
         </div>
-</div>
-
+      </div>
       </div>
     </div>
   );
