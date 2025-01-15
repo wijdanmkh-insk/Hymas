@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../others/Layout';
 import White_layout from '../others/White_layout';
+import Login_test from './Login_test';
 
 const Hero_page: React.FC = () => {
   const navigate = useNavigate();
@@ -32,6 +33,13 @@ const Hero_page: React.FC = () => {
                 <div className='px-4 py-1 uppercase border-hijau-tua border-2 bg-putih text-hijau-tua rounded-2xl text-center' 
                 onClick={()=>navigate('/main')}>
                   lihat
+                </div>
+
+                <div
+                  className='px-4 py-1 uppercase bg-hijau-tua text-putih rounded-2xl text-center cursor-pointer'
+                  onClick={() => navigate('/Login_test')}
+                >
+                  login tes
                 </div>
 
                 <div
