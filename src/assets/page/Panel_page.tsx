@@ -3,18 +3,16 @@ import { useNavigate } from 'react-router-dom';
 import Layout from '../others/Layout';
 import White_layout from '../others/White_layout';
 
-const Main_page: React.FC = () => {
+const Hero_page: React.FC = () => {
   const navigate = useNavigate();
 
   return (
     <Layout>
-      <div className='flex items-center justify-center min-h-screen'>
-        <White_layout>
-          <p> hai sayang </p>
-        </White_layout>
+      <div className='flex items-center justify-center mt-6'>
+        <img className="w-64" src="./src/assets/img/Logo hymas.png"></img>         
       </div>
     </Layout>
   );
 };
 
-export default Main_page;
+export default Hero_page;

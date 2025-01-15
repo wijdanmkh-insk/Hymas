@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../others/Layout';
+import White_layout from '../others/White_layout';
 
 const Hero_page: React.FC = () => {
   const navigate = useNavigate();
@@ -8,7 +9,7 @@ const Hero_page: React.FC = () => {
   return (
     <Layout>
       <div className='flex items-center justify-center min-h-screen'>
-        <div className='flex items-center justify-center px-8 py-6 mx-10 bg-white w-full max-w-lg rounded-xl shadow-md'>
+        <White_layout>
           <div className="flex-row">
             <div className="flex justify-center items-center flex-col">
               <div className="w-32">
@@ -28,7 +29,8 @@ const Hero_page: React.FC = () => {
 
             <div className="flex flex-col items-center mt-8">
               <div className='flex flex-row space-x-2'> 
-                <div className='px-4 py-1 uppercase border-hijau-tua border-2 bg-putih text-hijau-tua rounded-2xl text-center'>
+                <div className='px-4 py-1 uppercase border-hijau-tua border-2 bg-putih text-hijau-tua rounded-2xl text-center' 
+                onClick={()=>navigate('/main')}>
                   lihat
                 </div>
 
@@ -41,7 +43,7 @@ const Hero_page: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </White_layout>
       </div>
     </Layout>
   );
