@@ -39,7 +39,7 @@ const Hero_page: React.FC = () => {
                   className='px-4 py-1 uppercase bg-hijau-tua text-putih rounded-2xl text-center cursor-pointer'
                   onClick={() => navigate('/Login_test')}
                 >
-                  login tes
+                  test
                 </div>
 
                 <div

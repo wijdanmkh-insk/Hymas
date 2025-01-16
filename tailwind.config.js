@@ -9,6 +9,10 @@ export default {
         sans:['freeman', 'sans-serif'],
       },
 
+      fontSize : {
+        'xxs' : '0.5rem',
+      },
+
       colors:{
         'hijau-muda' : '#1ED37D',
         'hijau-tua' : '#00904B',
