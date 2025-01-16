@@ -1,10 +1,12 @@
 import React, { useState, FormEvent } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Login_test: React.FC = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
+    const navigate = useNavigate();
 
     const handleLogin = async (event: FormEvent) => {
         event.preventDefault();
@@ -17,7 +19,7 @@ const Login_test: React.FC = () => {
             if (response.data.error) {
                 setMessage(response.data.error);
             } else {
-                setMessage(`Welcome! User ID: ${response.data.user_id}`);
+                navigate('/panel'); // Navigate to Panel_page.tsx
             }
         } catch (err) {
             setMessage('Error: Unable to connect to the server.');

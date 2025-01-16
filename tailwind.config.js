@@ -10,7 +10,8 @@ export default {
       },
 
       fontSize : {
-        'xxs' : '0.5rem',
+        'xxxs' : '0.5rem',
+        'xxs' : '0.75rem',
       },
 
       colors:{

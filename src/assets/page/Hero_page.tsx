@@ -2,14 +2,13 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../others/Layout';
 import White_layout from '../others/White_layout';
-import Login_test from './Login_test';
 
 const Hero_page: React.FC = () => {
   const navigate = useNavigate();
 
   return (
     <Layout>
-      <div className='flex items-center justify-center min-h-screen'>
+      <div className='flex items-center justify-center min-h-screen mx-6'>
         <White_layout>
           <div className="flex-row">
             <div className="flex justify-center items-center flex-col">
