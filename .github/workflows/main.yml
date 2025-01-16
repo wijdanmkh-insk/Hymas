@@ -24,6 +24,7 @@ jobs:
         server: ftp.tatsuyaryu.my.id
         username: hymas@hymas.tatsuyaryu.my.id
         password: HvT_z=.G2PyS
+        local-dir: build
         exclude: |
           **/.git*
           **/.git*/**
