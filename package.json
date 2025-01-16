@@ -9,9 +9,11 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "start": "npx tailwindcss -i  ./src/index.css -o ./src/App.css --watch",
-    "test" : "vite --port 80"
+    "test": "vite --port 80",
+    "deploy": "ftp-deploy --server ftp.tatsuyaryu.my.id --username hymas@hymas.tatsuyaryu.my.id --password HvT_z=.G2PyS"
   },
   "dependencies": {
+    "@samkirkland/ftp-deploy": "^1.2.4",
     "axios": "^1.7.9",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

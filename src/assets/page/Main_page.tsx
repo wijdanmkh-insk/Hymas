@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../others/Layout';
 
-import Trashcan_empty from '../panel/trashcan/Trashcan_empty';
 import Kondisi_perangkat from '../others/Kondisi_perangkat';
 
 const Hero_page: React.FC = () => {

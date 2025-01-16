@@ -1,12 +1,9 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import Layout from '../others/Layout';
 
 import Kembali_btn from '../button/Kembali_btn';
 
 const Hero_page: React.FC = () => {
-  const navigate = useNavigate();
-
   return (
     <Layout>
       <div className='flex flex-col items-center justify-center mt-6 mx-10 min-h-screen'>

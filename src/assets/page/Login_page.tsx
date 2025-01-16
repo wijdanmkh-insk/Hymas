@@ -2,7 +2,6 @@ import React, { useState, FormEvent } from "react";
 import Layout from "../others/Layout"; 
 import White_layout from "../others/White_layout";
 import { useNavigate } from 'react-router-dom';
-import axios from "axios";
 
 const LoginForm: React.FC = () => {
   const [username, setUsername] = useState<string>("");
