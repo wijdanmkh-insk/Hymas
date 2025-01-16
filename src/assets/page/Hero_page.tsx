@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../others/Layout';
 import White_layout from '../others/White_layout';
-import logo from '../assets/img/logo.png';
+import logo from '../img/logo.png';
 
 const Hero_page: React.FC = () => {
   const navigate = useNavigate();
