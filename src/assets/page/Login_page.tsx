@@ -4,6 +4,7 @@ import White_layout from "../others/White_layout";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import Kembali_btn from "../button/Kembali_btn";
+import logo from "../img/Logo_hymas.png";
 
 const LoginForm: React.FC = () => {
   const [username, setUsername] = useState("");
@@ -40,7 +41,7 @@ const LoginForm: React.FC = () => {
               style={{ width: "300px" }}
             >
               <div className="flex justify-center mb-10">
-                <img src="./src/assets/img/Logo hymas.png" className="w-32" alt="Logo Hymas" />
+                <img src={logo} className="w-32" alt="Logo Hymas" />
               </div>
               <div className="mb-4">
                 <label className="block font-medium text-hijau-tua text-xs">masukkan nama pengguna</label>
