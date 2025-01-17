@@ -21,11 +21,26 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ftp.tatsuyaryu.my.id
-        username: hymas@hymas.tatsuyaryu.my.id
-        password: HvT_z=.G2PyS
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASS }}
         local-dir: build/
         exclude: |
           **/.git*
           **/.git*/**
           **/node_modules/**
+    
+    - name: 📂 Sync Backend Files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASS }}
+        local-dir: backend/
+        server-dir: /backend
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+
+  
