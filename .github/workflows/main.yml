@@ -36,8 +36,8 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASS }}
-        local-dir: backend/
-        server-dir: /backend
+        local-dir: ./backend/
+        server-dir: /backend/
         exclude: |
           **/.git*
           **/.git*/**
