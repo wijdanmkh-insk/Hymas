@@ -15,7 +15,7 @@ const LoginForm: React.FC = () => {
   const handleLogin = async (event: FormEvent) => {
     event.preventDefault();
     try {
-        const response = await axios.post('http://localhost:80/hymas/backend/api/login.php', {
+        const response = await axios.post('/backend/api/login.php', {
             username,
             password,
         });
