@@ -9,7 +9,7 @@ const Add_User: React.FC = () => {
     const handleAddUser = async (event: FormEvent) => {
         event.preventDefault();
         try {
-            const response = await axios.post('/backend/api/login.php', {
+            const response = await axios.post('/backend/api/makeuser.php', {
                 username,
                 password,
             });
