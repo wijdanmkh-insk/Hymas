@@ -1,26 +1,12 @@
-# Enable Rewrite Engine
-<IfModule mod_rewrite.c>
-    RewriteEngine On
+# Redirect all traffic to React (frontend)
+RewriteEngine On
+RewriteBase /
+RewriteRule ^api/ - [L] # Exclude API routes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
 
-    # Redirect to HTTPS (Optional, uncomment if needed)
-    # RewriteCond %{HTTPS} !=on
-    # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-    # Allow direct access to files and directories
-    RewriteCond %{REQUEST_FILENAME} -f [OR]
-    RewriteCond %{REQUEST_FILENAME} -d
-    RewriteRule ^ - [L]
-
-    # Redirect all other requests to index.html
-    RewriteRule ^ index.html [L]
+# Enable CORS for API (optional)
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
 </IfModule>
-
-# Prevent Access to Sensitive Files
-<FilesMatch "^(\.env|\.git|composer\.(json|lock)|package(-lock)?\.json|yarn\.lock|node_modules|\.htaccess)">
-    Order Allow,Deny
-    Deny from all
-</FilesMatch>
-
-# Disable Directory Listing
-Options -Indexes
-

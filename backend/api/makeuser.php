@@ -29,3 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo json_encode(['error' => 'Failed to add user: ' . $e->getMessage()]);
     }
 }
+
+?>
+
