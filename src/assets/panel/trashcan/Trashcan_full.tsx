@@ -1,5 +1,5 @@
 import React from 'react';
-import trashcan_empty from 'src/assets/icons/trashcan/full.svg';
+import trashcan_empty from '/src/assets/icons/trashcan/full.svg';
 
 const Trashcan_empty: React.FC = () => {
   return (
