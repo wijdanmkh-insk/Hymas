@@ -17,11 +17,11 @@ Hymas control system manager comes up with several main features, including :
 Hymas control system manager uses few dependencies. To set up this project, follow these steps :
 
 <ol>
-  <li>**Clone the repository**</li>
+  <li><strong>Clone the repository</strong></li>
   <code>git clone https://github.com/wijdanmkh-insk/hymas.git</code>
   <code>cd hymas</code>
 
-  <li>**Install dependencies**</li>
+  <li><strong>Install dependencies**</strong></li>
   <code>npm install</code>
   <code>npm run dev</code>
 </ol>
