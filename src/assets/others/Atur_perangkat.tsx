@@ -1,6 +1,6 @@
 import React from 'react';
-import Batt_charging from '../panel/batt/Batt_charging';
-import Trashcan_empty from '../panel/trashcan/Trashcan_empty';
+import Hymas_on from '../control_panel/activate/hymas_on';
+import Cam_on from '../control_panel/camera/camera_on';
 import Info_kondisi from './Info_kondisi';
 
 const Atur_perangkat: React.FC = () => {
@@ -9,8 +9,8 @@ const Atur_perangkat: React.FC = () => {
         <div className="mt-4 flex flex-col w-full h-full">
         <Info_kondisi></Info_kondisi>
         <div className="flex justify-between mt-4 space-x-4 flex-grow">
-            <Batt_charging />
-            <Trashcan_empty />
+            <Hymas_on></Hymas_on>
+            <Cam_on></Cam_on>
         </div>
         </div>
     </div>
