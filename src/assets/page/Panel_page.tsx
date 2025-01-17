@@ -5,6 +5,7 @@ import Kondisi_perangkat from '../others/Kondisi_perangkat';
 import Atur_perangkat from '../others/Atur_perangkat';
 import Kembali_btn from '../button/Kembali_btn';
 
+
 const Panel_page: React.FC = () => {
   return (
     <Layout>

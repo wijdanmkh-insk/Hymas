@@ -3,13 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://hymas.tatsuyaryu.my.id",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "start": "npx tailwindcss -i  ./src/index.css -o ./src/App.css --watch",
-    "test" : "vite --port 80"
+    "test": "vite --port 80"
   },
   "dependencies": {
     "axios": "^1.7.9",
