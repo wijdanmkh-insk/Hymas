@@ -19,6 +19,7 @@ export default {
         'hijau-tua' : '#00904B',
         'putih':'#ffffff',
         'hitam':'#3D473E',
+        'merah': '#ef4444',
       },
     },
   },

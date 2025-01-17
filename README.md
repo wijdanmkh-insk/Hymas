@@ -1,82 +1,27 @@
-# React + TypeScript + Vite
+![Hymas Logo](/src/assets/img/Logo%20hymas.png)
+# Overview
+<p>Hymas is a product made by the team "Apa Yah" as a community service product to take off the river trash that floats automatically. </p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules
+<p>This repo shows the Hymas controller system manager, which helps the people monitor the device and control the device remotely, using the website and their phone.</p>
 
-Currently, two official plugins are available:
+# Features
+Hymas control system manager comes up with several main features, including : 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<ol>
+  <li>**Schedule controlling**</li>
+  <li>**Monitoring through camera**</li>
+  <li>**Notification when the bin are full**</li>
+</ol>
 
-## Expanding the ESLint configuration
+# Installation
+Hymas control system manager uses few dependencies. To set up this project, follow these steps :
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<ol>
+  <li>**Clone the repository**</li>
+  <code>git clone https://github.com/wijdanmkh-insk/hymas.git</code>
+  <code>cd hymas</code>
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-
-# Required Packs to Install
-Follow these steps to install required dependencies
-## React-Vite
-### Install the latest version of React-Vite
-```
-npm create vite@latest my-vue-app -- --template vue
-```
-### Change directories of the project and install the dependencies
-```
-cd my-project
-npm install
-```
-
-## Tailwind
-### Create Vite Project
-```
-npm create vite@latest my-project -- --template react
-cd my-project
-```
-
-### Install Tailwind
-```
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-```
-
-### Run Project
-To run the project, type
-```
-npm run dev
-```
+  <li>**Install dependencies**</li>
+  <code>npm install</code>
+  <code>npm run dev</code>
+</ol>

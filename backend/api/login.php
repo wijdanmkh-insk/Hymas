@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $data['password'] ?? '';
 
     if (empty($username) || empty($password)) {
-        echo json_encode(['error' => 'Username and password are required']);
+        echo json_encode(['error' => 'Isi nama pengguna dan kata sandi']);
         exit;
     }
 
