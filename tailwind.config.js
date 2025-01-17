@@ -10,7 +10,8 @@ export default {
       },
 
       fontSize : {
-        'xxs' : '0.5rem',
+        'xxxs' : '0.5rem',
+        'xxs' : '0.75rem',
       },
 
       colors:{
@@ -18,6 +19,7 @@ export default {
         'hijau-tua' : '#00904B',
         'putih':'#ffffff',
         'hitam':'#3D473E',
+        'merah': '#ef4444',
       },
     },
   },

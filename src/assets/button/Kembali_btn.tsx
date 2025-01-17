@@ -11,7 +11,7 @@ const Kembali_btn : React.FC = () => {
   return (
     <button
       onClick={handleClick}
-      className="px-10 w-screen mx-12 py-2 bg-putih rounded-2xl hover:bg-putih hover:text-hijau-tua text-hijau-tua uppercase"
+      className="px-4 w-screen mx-12 py-2 bg-putih rounded-2xl hover:bg-putih hover:text-hijau-tua text-hijau-tua uppercase"
     >
       Kembali
     </button>

@@ -1,9 +1,9 @@
 import React from 'react';
 import Layout from '../others/Layout';
-
 import Kondisi_perangkat from '../others/Kondisi_perangkat';
+import Kembali_btn from '../button/Kembali_btn';
 
-const Hero_page: React.FC = () => {
+const Main_page: React.FC = () => {
   return (
     <Layout>
       <div className='flex flex-col items-center justify-center mt-10 mx-10'>
@@ -11,10 +11,17 @@ const Hero_page: React.FC = () => {
           <img className="w-32" src="./src/assets/img/Logo hymas.png" alt="Logo hymas" />
         </div>
 
-        <Kondisi_perangkat></Kondisi_perangkat>         
+        <div className="mt-4">
+          <Kondisi_perangkat></Kondisi_perangkat>
+        </div>
+
+        
+        <div className="absolute bottom-0 left-0 right-0 flex justify-center mb-4">
+          <Kembali_btn></Kembali_btn>
+        </div>         
       </div>
     </Layout>
   );
 };
 
-export default Hero_page;
+export default Main_page;

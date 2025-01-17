@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $data['password'] ?? '';
 
     if (empty($username) || empty($password)) {
-        echo json_encode(['error' => 'Username and password are required']);
+        echo json_encode(['error' => 'Isi nama pengguna dan kata sandi']);
         exit;
     }
 
@@ -25,6 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($user && password_verify($password, $user['password'])) {
         echo json_encode(['message' => 'Login successful', 'user_id' => $user['id']]);
     } else {
-        echo json_encode(['error' => 'Invalid username or password']);
+        echo json_encode(['error' => 'Nama pengguna atau kata sandi salah!']);
     }
 }

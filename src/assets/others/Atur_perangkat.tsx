@@ -1,13 +1,13 @@
 import React from 'react';
-import Brief_info from '../others/Brief_info';
 import Batt_charging from '../panel/batt/Batt_charging';
 import Trashcan_empty from '../panel/trashcan/Trashcan_empty';
+import Info_kondisi from './Info_kondisi';
 
-const Kondisi_perangkat: React.FC = () => {
+const Atur_perangkat: React.FC = () => {
   return (
     <div className="border-putih border-4 rounded-xl p-4">
         <div className="mt-4 flex flex-col w-full h-full">
-        <Brief_info />
+        <Info_kondisi></Info_kondisi>
         <div className="flex justify-between mt-4 space-x-4 flex-grow">
             <Batt_charging />
             <Trashcan_empty />
@@ -17,4 +17,4 @@ const Kondisi_perangkat: React.FC = () => {
   );
 };
 
-export default Kondisi_perangkat;
+export default Atur_perangkat;
