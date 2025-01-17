@@ -11,12 +11,11 @@ const LoginForm: React.FC = () => {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState('');
   const navigate = useNavigate(); 
-  const host = window.location.host;
-  const apiEndpoint = `http://${host}/backend/api/login.php`;
+
   const handleLogin = async (event: FormEvent) => {
     event.preventDefault();
     try {
-        const response = await axios.post(apiEndpoint, {
+        const response = await axios.post('http://localhost/backend/api/login.php', {
             username,
             password,
         });
