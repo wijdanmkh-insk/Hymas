@@ -18,21 +18,6 @@ jobs:
         npm install
         npm run build
 
-    - name: ⚙️ Add .htaccess 
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASS }}
-        local-dir: ./
-        exclude: |
-          **/.git*
-          **/.git*/**
-          **/node_modules/**
-          backend/**
-          build/**
-        dangerous-clean-slate: false
-
     - name: 📂 Deploy Build Files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
@@ -40,7 +25,6 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASS }}
         local-dir: build/
-        server-dir: /build/
         exclude: |
           **/.git*
           **/.git*/**
@@ -59,6 +43,32 @@ jobs:
           **/.git*
           **/.git*/**
           **/node_modules/**
+
+    - name: ⚙️ Add .htaccess 
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASS }}
+        local-dir: ./
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/src/**
+          .gitignore
+          eslint.config.json
+          package.json
+          index.html
+          package-lock.json
+          postcss.config.js
+          README.md
+          tailwind.config.js
+          tsconfig.json
+          tsconfig.app.json
+          tsconfig.node.json
+          vite.config.ts
         dangerous-clean-slate: false
+
 
   
