@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../others/Layout';
 import White_layout from '../others/White_layout';
+import logo from '../img/logo.png';
 
 const Hero_page: React.FC = () => {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ const Hero_page: React.FC = () => {
           <div className="flex-row">
             <div className="flex justify-center items-center flex-col">
               <div className="w-32">
-                <img src="./src/assets/img/logo.png" alt="Logo" />
+                <img src={logo} alt="Logo" />
               </div>
 
               <div className='justify-center py-4'>
