@@ -25,18 +25,27 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASS }}
         local-dir: ./
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          backend/**
+          build/**
+        dangerous-clean-slate: false
 
-    - name: 📂 Sync files
+    - name: 📂 Deploy Build Files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASS }}
-        local-dir: build/
+        local-dir: build/\
+        server-dir: /build/
         exclude: |
           **/.git*
           **/.git*/**
           **/node_modules/**
+        dangerous-clean-slate: false
     
     - name: 📂 Sync Backend Files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -50,5 +59,6 @@ jobs:
           **/.git*
           **/.git*/**
           **/node_modules/**
+        dangerous-clean-slate: false
 
   
