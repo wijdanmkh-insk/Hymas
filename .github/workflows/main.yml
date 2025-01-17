@@ -17,7 +17,34 @@ jobs:
       run: |
         npm install
         npm run build
+
+    - name: ⚙️ Add .htaccess 
+      run: |
+        echo "Adding .htaccess file to the root directory"
+        cat <<EOL > .htaccess
+        # Enable Rewrite Engine
+        <IfModule mod_rewrite.c>
+            RewriteEngine On
     
+            # Allow direct access to files and directories
+            RewriteCond %{REQUEST_FILENAME} -f [OR]
+            RewriteCond %{REQUEST_FILENAME} -d
+            RewriteRule ^ - [L]
+    
+            # Redirect all other requests to index.html
+            RewriteRule ^ /index.html [L]
+        </IfModule>
+    
+        # Prevent Access to Sensitive Files
+        <FilesMatch "^(\.env|\.git|composer\.(json|lock)|package(-lock)?\.json|yarn\.lock|node_modules|\.htaccess)">
+            Order Allow,Deny
+            Deny from all
+        </FilesMatch>
+    
+        # Disable Directory Listing
+        Options -Indexes
+        EOL
+
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
