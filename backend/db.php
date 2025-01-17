@@ -1,7 +1,7 @@
 <?php
-$host = 'hymas@hymas.tatsuyaryu.my.id';
-$db = 'tatsuyar_admin';
-$user = '^8}dV;y_xcvz';
+$host = 'localhost';
+$db = 'tatsuyar_hymas';
+$user = '((.I3Q5$uA9~';
 $pass = ''; 
 
 try {
