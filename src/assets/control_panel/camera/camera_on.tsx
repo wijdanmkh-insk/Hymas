@@ -15,7 +15,10 @@ const Cam_on: React.FC = () => {
       </div>
     </div>
 
-    <Enable_cam />
+    <div className="pt-1">
+        <Enable_cam />
+    </div>
+    
     </div>
   );
 };
