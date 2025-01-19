@@ -1,6 +1,6 @@
 import React from 'react';
 import Hymas_on from '../control_panel/activate/hymas_on';
-import Cam_on from '../control_panel/camera/camera_on';
+import Toggle_cam from '../control_panel/camera/Toggle_cam';
 import Info_kondisi from './Info_kondisi';
 
 const Atur_perangkat: React.FC = () => {
@@ -10,7 +10,7 @@ const Atur_perangkat: React.FC = () => {
         <Info_kondisi></Info_kondisi>
         <div className="flex justify-between mt-4 space-x-4 flex-grow">
             <Hymas_on></Hymas_on>
-            <Cam_on></Cam_on>
+            <Toggle_cam></Toggle_cam>
         </div>
         </div>
     </div>

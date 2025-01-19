@@ -1,6 +1,6 @@
 import React from 'react';
 import on from '/src/assets/icons/kamera/camera.svg';
-import Enable_cam from './lihat_camera';
+import Enable_cam from './Lihat_camera';
 
 const Cam_on: React.FC = () => {
   return (
