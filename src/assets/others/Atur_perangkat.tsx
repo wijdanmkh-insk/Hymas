@@ -14,7 +14,7 @@ const Atur_perangkat: React.FC = () => {
     setError(null);
     try {
       const response = await fetch(
-        "http://localhost:80/hymas/backend/api/MotorController.php"
+        "/backend/api/MotorController.php"
       );
       const text = await response.text();
 

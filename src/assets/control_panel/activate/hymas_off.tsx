@@ -9,7 +9,7 @@ const Hymas_off: React.FC<HymasOffProps> = ({ onStatusChange }) => {
   const sendMotorStatus = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:80/hymas/backend/api/off.php",
+        "/backend/api/off.php",
         {
           status: "off",
         }
