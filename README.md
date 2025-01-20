@@ -18,6 +18,8 @@ Hymas control system manager uses few dependencies. To set up this project, foll
 
 npm install
 
+composer install
+
 npm install --save-dev @types/node
 
 rename .env.example to .env

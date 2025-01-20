@@ -1,8 +1,9 @@
 <?php
 include_once '../db.php'; // Pastikan file ini ada dan koneksi database benar
-header('Access-Control-Allow-Origin: *');
-
 header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Methods: GET");
+header("Access-Control-Allow-Headers: Content-Type");
 
 try {
     $method = $_SERVER['REQUEST_METHOD'];
