@@ -1,10 +1,21 @@
 <?php
-$host = 'localhost';
-$db = 'hymas';
-$user = 'admin';
-$pass = 'admin'; 
+
+require_once __DIR__ . '/../vendor/autoload.php'; // Perbaiki path
+
+use Dotenv\Dotenv;
+
+// Memuat file .env
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../');  // Memuat .env dari root folder
+$dotenv->load();
+
+// Ambil variabel-variabel konfigurasi dari .env
+$host = $_ENV['DB_HOST'];
+$db = $_ENV['DB_DATABASE'];
+$user = $_ENV['DB_USERNAME'];
+$pass = $_ENV['DB_PASSWORD'];
 
 try {
+    // Membuat koneksi ke database menggunakan PDO
     $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
