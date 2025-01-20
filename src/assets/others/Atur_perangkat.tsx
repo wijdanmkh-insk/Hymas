@@ -3,6 +3,7 @@ import Hymas_on from "../control_panel/activate/hymas_on";
 import Hymas_off from "../control_panel/activate/hymas_off";
 import Cam_on from "../control_panel/camera/camera_on";
 import Info_kondisi from "./Info_kondisi";
+import config from "../../config";
 
 const Atur_perangkat: React.FC = () => {
   const [motorStatus, setMotorStatus] = useState<"ON" | "OFF" | null>(null);
@@ -14,7 +15,7 @@ const Atur_perangkat: React.FC = () => {
     setError(null);
     try {
       const response = await fetch(
-        "/backend/api/MotorController.php"
+        `${config.BACKEND_API_DOMAIN}/hymas/backend/api/MotorController.php`
       );
       const text = await response.text();
 

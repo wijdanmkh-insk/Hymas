@@ -16,6 +16,20 @@ Hymas control system manager comes up with several main features, including :
 # Installation
 Hymas control system manager uses few dependencies. To set up this project, follow these steps :
 
+npm install
+
+npm install --save-dev @types/node
+
+rename .env.example to .env
+
+change the value of the .env
+
+npm run dev
+
+npm run build for production
+
+git push will effect to the website, just change on .github/workflows/main.yml
+
 <ol>
   <li><strong>Clone the repository</strong></li>
   <code>git clone https://github.com/wijdanmkh-insk/hymas.git</code>

@@ -1,5 +1,7 @@
 import axios from "axios";
 import off from "/src/assets/icons/on-off/off.svg";
+import config from "../../../config";
+
 
 interface HymasOffProps {
   onStatusChange: () => void;
@@ -9,7 +11,7 @@ const Hymas_off: React.FC<HymasOffProps> = ({ onStatusChange }) => {
   const sendMotorStatus = async () => {
     try {
       const response = await axios.post(
-        "/backend/api/off.php",
+        `${config.BACKEND_API_DOMAIN}/hymas/backend/api/off.php`,
         {
           status: "off",
         }
