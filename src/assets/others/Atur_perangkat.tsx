@@ -85,7 +85,7 @@ const Atur_perangkat: React.FC = () => {
       <div className="mt-4 flex flex-col w-full h-full">
         <Info_kondisi />
         <div className="flex justify-between mt-4 space-x-4 flex-grow">
-          {renderContent()
+          {renderContent()}
         </div>
       </div>
       <Schedule_overlay isVisible={isOverlayVisible} onClose={handleCloseOverlay} />
