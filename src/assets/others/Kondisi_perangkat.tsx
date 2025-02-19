@@ -1,7 +1,7 @@
 import React from 'react';
 import Brief_info from '../others/Brief_info';
 import Batt_charging from '../panel/batt/Batt_charging';
-import Trashcan_empty from '../panel/trashcan/Trashcan_empty';
+import Trashcan_state from '../panel/trashcan/Trashcan_state';
 
 const Kondisi_perangkat: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ const Kondisi_perangkat: React.FC = () => {
         <Brief_info />
         <div className="flex justify-between mt-4 space-x-4 flex-grow">
             <Batt_charging />
-            <Trashcan_empty />
+            <Trashcan_state />
         </div>
         </div>
     </div>
