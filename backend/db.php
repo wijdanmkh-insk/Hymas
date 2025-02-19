@@ -15,6 +15,7 @@ $user = $_ENV['DB_USERNAME'];
 $pass = $_ENV['DB_PASSWORD'];
 
 try {
+    $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     //echo "Connected to the database successfully!";
 } catch (PDOException $e) {
