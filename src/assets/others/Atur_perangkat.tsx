@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import Hymas_on from "../control_panel/activate/hymas_on";
 import Hymas_off from "../control_panel/activate/hymas_off";
@@ -84,8 +83,17 @@ const Atur_perangkat: React.FC = () => {
     <div className="border-putih border-4 rounded-xl p-4">
       <div className="mt-4 flex flex-col w-full h-full">
         <Info_kondisi />
-        <div className="flex justify-between mt-4 space-x-4 flex-grow">
-          {renderContent()}
+        <div className="flex flex-col mt-4 space-y-4">
+          <div>{renderContent()}</div>
+          
+          <button onClick={handleOpenOverlay}>
+              <Schedule></Schedule>
+          </button>
+
+          <div>
+            <Cam_feed esp32Ip={esp32Ip}/>
+          </div>         
+          
         </div>
       </div>
       <Schedule_overlay isVisible={isOverlayVisible} onClose={handleCloseOverlay} />
