@@ -1,12 +1,12 @@
 import React from 'react';
-import trashcan_empty from '/src/assets/icons/trashcan/full.svg';
+import full from '/src/assets/icons/trashcan/full.svg';
 
-const Trashcan_empty: React.FC = () => {
+const Trashcan_full: React.FC = () => {
   return (
     <div className="flex items-center bg-white rounded-2xl px-2 py-4 uppercase text-hijau-tua">
-      <img className="w-9 h-9 mr-2 text-merah" src={trashcan_empty} />
+      <img className="w-9 h-9 mr-2 text-merah" src={full} />
       <div>
-        <span className="block text-xs -mb-1">tempat sampah</span>
+        <span className="block text-xs -mb-1">tong sampah</span>
         <div className="text-xxxs">
           <span className="block">penuh</span>
         </div>
@@ -15,4 +15,4 @@ const Trashcan_empty: React.FC = () => {
   );
 };
 
-export default Trashcan_empty;
+export default Trashcan_full;

@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.button-common {
+    min-width: 150px; /* Set the minimum width */
+    max-width: 200px; /* Set the maximum width */
+    height: 50px;     /* Set the height */
+}

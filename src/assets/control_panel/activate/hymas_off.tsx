@@ -32,15 +32,17 @@ const Hymas_off: React.FC<HymasOffProps> = ({ onStatusChange }) => {
   return (
     <div
       onClick={sendMotorStatus}
-      className="flex items-center bg-white rounded-2xl px-4 py-2 uppercase text-hijau-tua cursor-pointer"
+      className="flex items-center bg-white rounded-2xl px-4 py-4 uppercase text-hijau-tua cursor-pointer"
     >
-      <img className="w-9 h-9 mr-2 text-hijau-muda" src={off} alt="off" />
-      <div>
-        <span className="block text-sm -mb-1">matikan</span>
-        <div className="text-xxxs">
-          <span className="block">hymas</span>
-        </div>
+      
+      <div className="flex flex-row items-center">
+        <img className="w-7 h-9 text-hijau-muda mr-2" src={off} alt="off" />
+          <div>
+            <span className="block text-sm -mb-1">matikan hymas</span>
+          </div>
       </div>
+
+
     </div>
   );
 };
