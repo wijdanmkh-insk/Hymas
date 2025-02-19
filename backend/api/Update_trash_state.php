@@ -4,24 +4,25 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
 
-require_once 'db.php';
+require_once '../db.php';
 
-// Read JSON input
-$input = file_get_contents("php://input");
-$data = json_decode($input, true);
+try {
+    // Database connection
+    // Read JSON input
+    $input = file_get_contents("php://input");
+    $data = json_decode($input, true);
 
-if ($data && isset($data['state'])) {
-    $state = intval($data['state']);
+    if ($data && isset($data['state'])) {
+        $state = intval($data['state']);
 
-    $sql = "INSERT INTO trash_state (state) VALUES ($state)";
-    if ($conn->query($sql) === TRUE) {
+        $stmt = $pdo->prepare("INSERT INTO camera_status (status) VALUES (:state)");
+        $stmt->execute(['state' => $state]);
+
         echo json_encode(["success" => true, "message" => "State updated"]);
     } else {
-        echo json_encode(["success" => false, "message" => "Database error"]);
+        echo json_encode(["success" => false, "message" => "Invalid JSON"]);
     }
-} else {
-    echo json_encode(["success" => false, "message" => "Invalid JSON"]);
+} catch (PDOException $e) {
+    echo json_encode(["success" => false, "message" => "Database error", "error" => $e->getMessage()]);
 }
-
-$conn->close();
 ?>

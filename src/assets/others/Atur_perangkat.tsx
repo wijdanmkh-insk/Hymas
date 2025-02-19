@@ -5,9 +5,10 @@ import Schedule from "../control_panel/schedule/Schedule";
 import Schedule_overlay from "../others/Schedule_overlay";
 import Info_kondisi from "./Info_kondisi";
 import config from "../../config";
-import Toggle_cam from "../control_panel/camera/Toggle_cam";
+import Cam_feed from "../control_panel/camera/Cam_feed";
 
 const Atur_perangkat: React.FC = () => {
+  const esp32Ip = "http://192.168.1.25";
   const [motorStatus, setMotorStatus] = useState<"ON" | "OFF" | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -90,9 +91,8 @@ const Atur_perangkat: React.FC = () => {
           </button>
 
           <div>
-            <Toggle_cam />
-          </div>
-          
+            <Cam_feed esp32Ip={esp32Ip}/>
+          </div>         
           
         </div>
       </div>

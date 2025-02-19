@@ -4,18 +4,21 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET");
 header("Access-Control-Allow-Headers: Content-Type");
 
-require_once 'db.php';
+require_once '../db.php';
 
-// Get the latest trashcan state
-$sql = "SELECT state FROM trash_state ORDER BY timestamp DESC LIMIT 1";
-$result = $conn->query($sql);
+try {
+    // Get the latest trashcan state
+    $sql = "SELECT state FROM trash_state ORDER BY timestamp DESC LIMIT 1";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetch();
 
-if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-    echo json_encode(["state" => intval($row['state'])]);
-} else {
-    echo json_encode(["state" => null]);
+    if ($result) {
+        echo json_encode(["state" => intval($result['state'])]);
+    } else {
+        echo json_encode(["state" => null]);
+    }
+} catch (PDOException $e) {
+    echo json_encode(["success" => false, "message" => "Database error", "error" => $e->getMessage()]);
 }
-
-$conn->close();
 ?>
